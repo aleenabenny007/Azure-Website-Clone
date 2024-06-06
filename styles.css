@@ -109,13 +109,13 @@ a {
 
 .buttons-list>li {
     font-family: "Segoe UI-semibold" !important;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: normal;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
     font-weight: 500;
     background-color: #dce9f2;
     color: #004275;
-    padding: 8px 24px;
+    padding: 9px 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -545,15 +545,6 @@ main {
     place-items: center;
 }
 
-/* ,.body-content-banner  */
-/* {
-    margin: 96px 0;
-    max-width: 1328px;
-    padding: 0 5%;
-    box-sizing: content-box;
-    width: 90%;
-} */
-
 .title-capital {
     font-family: "Segoe UI-semibold" !important;
     font-size: 12px;
@@ -658,7 +649,6 @@ main {
 
 .solutions {
     margin-top: 95px;
-    margin-bottom: 500px;
     box-sizing: content-box;
     width: 100%;
     background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/solution-background_desktop-2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=980&qlt=100&fmt=png-alpha&fit=constrain");
@@ -719,7 +709,8 @@ main {
     padding: 32px 0;
 }
 
-.scrollable-list>ul>li:not(:first-child),.scrollable-list>ul>li>div{
+.scrollable-list>ul>li:not(:first-child),
+.scrollable-list>ul>li>div {
     display: flex;
     align-items: center;
     column-gap: 7.5px;
@@ -732,26 +723,26 @@ main {
     padding-bottom: 34px;
 }
 
-.scrollable-list>ul>li:first-child>div{
+.scrollable-list>ul>li:first-child>div {
     margin-bottom: 32px;
     column-gap: 8.1px;
 }
 
-.scrollable-list>ul>li:first-child .solutions-image{
+.scrollable-list>ul>li:first-child .solutions-image {
     display: none;
 }
 
-.scrollable-list>ul>li:first-child>p{
+.scrollable-list>ul>li:first-child>p {
     margin-bottom: 32px;
 }
 
-.scrollable-list .icon.arrow-down{
+.scrollable-list .icon.arrow-down {
     width: 17px;
     height: 17px;
     margin-top: 4px;
 }
 
-.scrollable-list .icon.arrow-down.invert{
+.scrollable-list .icon.arrow-down.invert {
     transform: rotate(180deg);
     margin-top: 0;
 }
@@ -790,22 +781,22 @@ main {
     border-radius: 25px;
     display: grid;
     place-items: center;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.solutions-image>img{
+.solutions-image>img {
     object-position: center;
     width: 100%;
     height: 100%;
 }
 
-.solutions-image>div{
+.solutions-image>div {
     padding: 6.5px 7px;
     position: absolute;
     z-index: 10;
 }
 
-.solutions-image>div>img{
+.solutions-image>div>img {
     width: 17px;
 }
 
@@ -820,7 +811,6 @@ main {
     background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/product-background_desktop_homepage?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=1129&qlt=100&fmt=png-alpha&fit=constrain");
     background-position: right;
     background-repeat: no-repeat;
-    /* background-size: cover; */
     display: grid;
     place-items: center;
 }
@@ -832,11 +822,17 @@ main {
     box-sizing: content-box;
 }
 
+.products-and-services .buttons-list{
+    margin-top: 48px;
+}
+
 .products-and-services-divs {
     display: flex;
-    gap: 14px;
-    margin-top: 50px;
+    gap: 16px;
+    margin-top: 48px;
     flex-wrap: wrap;
+    padding-right: 8px;
+    box-sizing: border-box;
 }
 
 .products-and-services-divs p {
@@ -856,8 +852,9 @@ main {
 }
 
 .products-and-services-divs .main {
-    min-width: 318px;
+    max-width: 318px;
     width: 100%;
+    min-width: 310px;
     height: 564px;
     flex: 1;
     background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/ACOM-HP-Desktop-ENUS-Product-PromoCard-Phi3-Overlay@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=320&hei=560&qlt=100&fmt=png-alpha&fit=constrain");
@@ -865,6 +862,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .products-and-services-divs>.main * {
@@ -908,14 +906,15 @@ main {
 .products-and-services-divs>.grid {
     flex: 1;
     display: grid;
-    gap: 10px;
+    gap: 15px;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
 }
 
 .products-and-services-divs>.grid>li {
-    min-width: 318px;
+    min-width: 308px;
     width: 100%;
+    max-width: 316px;
     min-height: 270px;
     height: 100%;
     background-color: #fefefe;
@@ -959,7 +958,15 @@ main {
 /* products and services end  */
 
 /* body content banner starts */
-.body-content-banner {
+.body-content-banner  {
+    margin-top: 66px;
+    max-width: 1328px;
+    padding: 0 5%;
+    box-sizing: content-box;
+    width: 90%;
+}
+
+.body-content-banner>div{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -970,9 +977,10 @@ main {
     margin: 0;
     padding: 8px;
     border-radius: 25px;
+    box-sizing: border-box;
 }
 
-.body-content-banner>div:first-child {
+.body-content-banner>div>div:first-child {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1007,7 +1015,7 @@ main {
     border-radius: 8px;
 }
 
-.body-content-banner>div:not(:first-child) {
+.body-content-banner>div>div:not(:first-child) {
     max-width: 50%;
     height: 100%;
     flex: 1;
@@ -1137,7 +1145,7 @@ main {
 /* resources by role ends  */
 
 /* seperating banner start  */
-.seperating-banner {
+.seperating-banner>div {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -1148,12 +1156,12 @@ main {
     overflow: hidden;
 }
 
-.seperating-banner * {
-    color: white;
+.seperating-banner>div * {
+    /* color: white; */
     font-size: 20px;
 }
 
-.seperating-banner h1 {
+.seperating-banner>div h1 {
     font-family: "Segoe UI-semibold" !important;
     font-size: 48px;
     line-height: 56px;
@@ -1162,7 +1170,7 @@ main {
     margin-top: 40px;
 }
 
-.seperating-banner p {
+.seperating-banner>div p {
     font-family: "Segoe UI" !important;
     font-size: 20px;
     line-height: 32px;
@@ -1170,7 +1178,7 @@ main {
     font-weight: 400;
 }
 
-.seperating-banner .square-button {
+.seperating-banner>div .square-button {
     font-family: "Segoe UI-semibold" !important;
     font-size: 15px;
     line-height: 22px;
@@ -1182,10 +1190,10 @@ main {
     margin-top: 10px;
 }
 
-.seperating-banner img {
+.seperating-banner>div img {
     width: 100%;
     aspect-ratio: initial;
-    position: absolute;
+    /* position: absolute; */
     z-index: -1;
     margin-top: -100px;
     height: 100%;
@@ -1194,7 +1202,308 @@ main {
 
 /* seperating banner end  */
 
+/* customer stories start  */
+.customer-stories{
+    margin-top: 96px;
+    max-width: 1328px;
+    padding: 0 5%;
+    box-sizing: content-box;
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+}
+
+.customer-stories-main-div{
+    background-color: #fefefe;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.customer-stories-main-div>.content{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.customer-stories-main-div>.content>.content-top img{
+    border-radius: 8px;
+    border: 1px solid #bdc5d2;
+}
+
+.customer-stories-main-div>.content>.content-top p{
+    font-family: "Segoe UI-semibold" !important;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    font-weight: 500;
+    color: #17253d;
+}
+
+.customer-stories-main-div>.content>.content-bottom{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    row-gap: 20px;
+}
+
+.customer-stories-main-div>.content>.content-bottom>p{
+    font-family: "Segoe UI-semibold" !important;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    font-weight: 400;
+    color: #0f1827;
+}
+
+.customer-stories-main-div>.content>.content-bottom>ul{
+    display: flex;
+    gap: 20px;
+}
+
+.customer-stories-main-div>.content>.content-bottom>ul>li{
+    display: flex;
+    column-gap: 5px;
+    min-width: max-content;
+    width: fit-content;
+    flex-wrap: nowrap;
+}
+
+.customer-stories-main-div>.content>.content-bottom>ul>li>a{
+    min-width: max-content;
+    color: #0067b8;
+    text-decoration: underline;
+}
+
+.customer-stories-main-div>.content>.content-bottom .square-button.blue{
+    font-family: "Segoe UI-semibold" !important;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+
+.customer-stories-main-div>.image{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.customer-stories-main-div>.image>img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.customer-stories-small-div{
+    /* max-width: 1000px; */
+    background-color: #fefefe;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 20px;
+    border-radius: 20px;
+    align-self: center;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+}
+
+.customer-stories-small-div>li{
+    padding: 35px;
+    border-bottom: 4px solid transparent;
+}
+
+.customer-stories-small-div>li:hover{
+    border-bottom-color: #005597;
+}
+
+.customer-stories-small-div>li:not(:first-child){
+    border-left: 1px solid #e2e2e2;
+}
+
+.customer-stories-small-div>li:first-child{
+    border-bottom-color: #005597;
+}
+
+.customer-stories-small-div>li>img{
+    height: 60px;
+}
+/* customer stories end  */
+
+/* body bottom section starts  */
+.body-bottom-section{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 0 5%;
+    padding-top: 50px;
+    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=512&qlt=100&fmt=png-alpha&fit=constrain");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-bottom: 50px;
+}
+
+.body-bottom-section>div{
+    max-width: 1328px;
+    width: 90%;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+
+.body-bottom-section>div>h1{
+    font-family: "Segoe UI-semibold" !important;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    font-weight: 500;
+}
+
+.body-bottom-section-divs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.body-bottom-section-divs>.card{
+    background-color: #fefefe;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    border-radius: 25px;
+}
+
+.body-bottom-section-divs>.card>h1{
+    font-family: "Segoe UI-semibold" !important;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    font-weight: 500;
+}
+
+.body-bottom-section-divs>.card>p{
+    /* font-family: "Segoe UI-semibold" !important; */
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    font-weight: 400;
+    color: #1e425d;
+}
+
+.body-bottom-section-divs>.card>ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* body bottom section ends  */
+
 /* main content ends  */
+
+
+/* footer starts  */
+
+footer{
+    width: 100%;
+    background-color: #f4f5f6;
+    display: grid;
+    place-items: center;
+}
+
+.footer-divs{
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+    row-gap: 30px;
+    padding: 50px 5%;
+}
+
+.footer-top-section{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-top-section img{
+    width: 24px;
+}
+
+.footer-top-section>.footer-top-button{
+    display: flex;
+    column-gap: 10px;
+    padding: 8px;
+    background-color: #eaebec;
+    max-width: fit-content;
+}
+
+.footer-top-section>.social-media{
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.footer-middle-section{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 30px;
+}
+
+.footer-middle-section>ul{
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+footer ul>li{
+    font-family: "Segoe UI" !important;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    font-weight: 400;
+}
+
+.footer-middle-section>ul>li:first-child{
+    font-family: "Segoe UI-semibold" !important;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    font-weight: 500;
+}
+
+footer svg{
+    height: 15.5px;
+}
+
+.footer-bottom-section{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.footer-bottom-section>div{
+    display: flex;
+}
+
+.footer-bottom-section>ul{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    align-items: right;
+    justify-content: flex-end;
+}
+
+.footer-bottom-section>ul>li{
+    min-width: max-content;
+}
+
+/* footer ends  */
 
 
 
@@ -1246,13 +1555,13 @@ main {
         letter-spacing: -0.54px;
     }
 
-    .scrollable-list>ul>li h1{
+    .scrollable-list>ul>li h1 {
         font-size: 18px;
         line-height: 24px;
         letter-spacing: -0.54px;
     }
 
-    .solutions .bottom-button{
+    .solutions .bottom-button {
         margin-top: 30px;
     }
 
@@ -1349,17 +1658,17 @@ main {
         width: 100%;
     }
 
-    .solutions{
+    .solutions {
         padding: 0;
     }
 
-    .solutions>div{
+    .solutions>div {
         padding: 0 3.5rem;
         box-sizing: border-box;
         width: 100%;
     }
 
-    .solutions .title{
+    .solutions .title {
         padding-right: 477px;
     }
 
@@ -1439,7 +1748,8 @@ main {
         margin-bottom: 14px;
     }
 
-    .featured-news,.solutions>div {
+    .featured-news,
+    .solutions>div {
         padding: 0 4rem;
     }
 
@@ -1472,51 +1782,78 @@ main {
         padding: 0 8px;
     }
 
-    .solutions-divs{
-        flex-flow: column;
+    .solutions{
+        background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/solution-background_mobile-2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=995&qlt=100&fmt=png-alpha&fit=constrain");
     }
 
-    .scrollable-list{
+    .solutions-divs {
+        flex-flow: column;
+        padding-right: 4px;
+    }
+
+    .scrollable-list {
         max-width: 100%;
     }
 
-    .scrollable-list hr{
+    .scrollable-list hr {
         display: none;
     }
 
-    .scrollable-list>ul>li:first-child .solutions-image{
+    .scrollable-list>ul>li {
+        padding: 0;
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+
+    .scrollable-list>ul>li:first-child {
+        padding-bottom: 24px;
+    }
+
+    .scrollable-list>ul>li:first-child>div {
+        margin-bottom: 25px;
+    }
+
+    .scrollable-list>ul>li:first-child>p {
+        margin-bottom: 27px;
+    }
+
+    .scrollable-list>ul>li:first-child .solutions-image {
         display: grid;
         width: 100%;
         max-width: none;
         max-height: none;
-        aspect-ratio: 5/4 !important;
+        aspect-ratio: initial !important;
         border-radius: 15px;
         position: relative;
-        margin-top: 30px;
+        margin: 26px 0 0 0;
     }
 
-    .solutions-image{
+    .scrollable-list>ul>li:first-child .solutions-image .small-button-blue {
+        padding: 6.5px 6px;
+    }
+
+    .solutions-image {
         display: none;
     }
-    
-    .solutions .title{
+
+    .solutions .title {
         padding-right: 0;
     }
 
-    .solutions{
+    .solutions {
         margin-top: 56px;
     }
 
-    .solutions-divs{
-        margin-top: 25px;
+    .solutions-divs {
+        margin-top: 23px;
     }
 
-    .buttons-list{
+    .buttons-list {
         margin-top: 33px;
     }
 
-    .buttons-list>li{
-        padding:7px 16px 9px 16px;
+    .buttons-list>li {
+        padding: 8px 16px 10px 16px;
     }
 
 }
@@ -1642,3 +1979,7 @@ main {
     }
 
 }
+
+
+
+/* ............................................. */
