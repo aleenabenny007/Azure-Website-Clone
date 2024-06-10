@@ -580,7 +580,7 @@ main {
     width: 100%;
     max-width: 1328px;
     box-sizing: border-box;
-    padding-right: 6px;
+    padding-right: 10px;
     margin-top: 47px;
     margin-left: -1px;
 }
@@ -596,7 +596,6 @@ main {
     flex-flow: column;
     flex: 1 1 0%;
     overflow: hidden;
-
 }
 
 .featured-news-divs>.card>img {
@@ -833,6 +832,8 @@ main {
     flex-wrap: wrap;
     padding-right: 8px;
     box-sizing: border-box;
+
+    overflow: hidden;
 }
 
 .products-and-services-divs p {
@@ -846,7 +847,7 @@ main {
 
 .products-and-services-divs>.main,
 .products-and-services-divs>.grid>li {
-    border-radius: 25px;
+    border-radius: 24px;
     box-sizing: border-box;
     box-shadow: 0px 2px 4px 1px #e2e8eb;
 }
@@ -855,7 +856,7 @@ main {
     max-width: 318px;
     width: 100%;
     min-width: 310px;
-    height: 564px;
+    height: 568px;
     flex: 1;
     background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/ACOM-HP-Desktop-ENUS-Product-PromoCard-Phi3-Overlay@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=320&hei=560&qlt=100&fmt=png-alpha&fit=constrain");
     background-position: center;
@@ -875,7 +876,11 @@ main {
     line-height: 40px;
     letter-spacing: -1.6px;
     font-weight: 500;
-    /* margin-bottom: 15px; */
+    margin-bottom: 1px;
+}
+
+.products-and-services-divs>.main p{
+    color: #dceef8;
 }
 
 .products-and-services-divs .square-button {
@@ -887,8 +892,8 @@ main {
     color: black;
     background-color: #b3daf0;
     border-radius: 8px;
-    padding: 14px 20px;
-    /* margin-top: 15px; */
+    padding: 14px 18px 16px 18px;
+    margin-top: 1px;
 }
 
 .products-and-services-divs .main .main-gradient {
@@ -906,15 +911,15 @@ main {
 .products-and-services-divs>.grid {
     flex: 1;
     display: grid;
-    gap: 15px;
+    gap: 16px;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
+    min-width: 962px;
 }
 
 .products-and-services-divs>.grid>li {
     min-width: 308px;
     width: 100%;
-    max-width: 316px;
     min-height: 270px;
     height: 100%;
     background-color: #fefefe;
@@ -924,6 +929,7 @@ main {
     flex-flow: column;
     row-gap: 16px;
     justify-content: flex-end;
+    flex: 1;
 }
 
 .products-and-services-divs>.grid h1 {
@@ -940,6 +946,8 @@ main {
     flex: 1;
     display: flex;
     align-items: flex-end;
+    margin-bottom: 2px;
+    text-underline-offset: 2px;
 }
 
 .products-and-services-divs>.grid>li>div {
@@ -967,26 +975,32 @@ main {
 }
 
 .body-content-banner>div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: #fefefe;
     width: 100%;
-    height: 500px;
-    margin: 0;
-    padding: 8px;
-    border-radius: 25px;
+    padding-right: 24px;
     box-sizing: border-box;
 }
 
-.body-content-banner>div>div:first-child {
+.body-content-banner>div>div{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fefefe;
+    width: 100%;
+    min-height: 512px;
+    height: 100%;
+    max-height: 504.25px;
+    margin: 0;
+    padding: 8px;
+    border-radius: 25px;
+    /* box-sizing: border-box; */
+}
+
+.body-content-banner>div>div>div:first-child {
     display: flex;
     flex-flow: column;
     justify-content: center;
     row-gap: 15px;
-    padding: 0 48px 0 10px;
-    flex: 1;
+    padding: 0 70px 0 10px;
 }
 
 .body-content-banner h1 {
@@ -1003,6 +1017,7 @@ main {
     line-height: 24px;
     letter-spacing: -0.48px;
     font-weight: 400;
+    color: #212e45;
 }
 
 .body-content-banner .square-button {
@@ -1015,15 +1030,18 @@ main {
     border-radius: 8px;
 }
 
-.body-content-banner>div>div:not(:first-child) {
-    max-width: 50%;
+.body-content-banner>div>div>div:not(:first-child){
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
     height: 100%;
-    flex: 1;
-    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gartner-accouncement-1_newimage?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=656&hei=492&qlt=100&fmt=png-alpha&fit=constrain");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px;
+}
+
+.body-content-banner>div>div>div:not(:first-child)>img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 /* body content banner ends  */
@@ -1033,13 +1051,12 @@ main {
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin: 96px 0;
-    /* padding: 0 5%; */
-    /* box-sizing: content-box; */
+    margin-top: 96px;
     width: 100%;
+    text-align: center;
 }
 
-.resources-by-role>.title {
+.resources-by-role .title {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -2px;
@@ -1051,43 +1068,54 @@ main {
     line-height: 32px;
     letter-spacing: -1.2px;
     font-weight: 500;
-    margin-top: 40px;
-    margin-bottom: -35px;
+    margin-top: 42px;
+    margin-bottom: -52px;
 }
 
 .resources-by-role>.resources-bg {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 100%;
-    height: 800px;
-    background-image: linear-gradient(180deg, #f4fafd, #f4fafd, #f4fafd, #f4fafdd7, #f4fafd62, transparent, transparent);
-    /* background-image: linear-gradient(90deg,#fbbe9f,#c861bb,#4b95c8); */
+    padding: 0 5%;
+    box-sizing: content-box;
+    width: 90%;
+    background-image: linear-gradient(90deg,#fbbe9f,#c861bb,#4b95c8);
+    backdrop-filter: blur(500px);
     z-index: 10;
-    position: absolute;
-    margin-top: 74px;
 }
 
-.resources-by-role>.gradient-bg {
+.resources-by-role>.resources-bg::before{
+    content: '';
+    height: 100%;
     width: 100%;
-    height: 800px;
-    background-image: linear-gradient(to right, #f7c5b6, #d467b8, #676ec5, #57a3cb);
-    margin-top: 100px;
-    z-index: 0;
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(180deg, #f4fafd, #f4fafd, #f4fafd, #f4fafdeb, #f4fafd85,transparent,transparent,transparent); 
+}
+
+.resources-by-role .navigation-tab{
+    min-width: 0;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    background-color: grey;
+    margin-bottom: 100px;
 }
 
 .resources-by-role ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3px;
     width: 1328px;
     height: fit-content;
     border-radius: 15px;
     background-color: #fefefe;
     overflow: hidden;
-    box-sizing: border-box;
-    margin-top: 30px;
+    margin-top: 32px;
+    border: 1px solid rgba(128, 128, 128, 0.22);
+
+    position: absolute;
+    z-index: 0;
 }
 
 
@@ -1095,12 +1123,12 @@ main {
     height: 100%;
     min-width: max-content;
     flex: 1;
-    border-bottom: 5px solid transparent;
+    border-bottom: 4px solid transparent;
     border-left: 1.5px solid #a9b1bc;
     display: flex;
     align-items: center;
-    column-gap: 25px;
-    padding: 18px 24px 17px 24px;
+    column-gap: 26px;
+    padding: 16px 24px 20px 24px;
     font-family: "Segoe UI-semibold" !important;
     font-size: 16px;
     line-height: 24px;
@@ -1109,7 +1137,7 @@ main {
 }
 
 .resources-by-role ul>li:first-child {
-    border-bottom: 5px solid var(--blue);
+    border-bottom: 4px solid var(--blue);
     border-left-color: transparent;
 }
 
@@ -1122,42 +1150,58 @@ main {
     display: flex;
     flex-flow: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .resources-by-role .transparent-bg {
-    width: 66.667%;
-    height: fit-content;
-    padding: 24px;
+    width: 62.85%;
+    height: initial;
+    padding: 20px 26px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(1.25rem);
-    border-radius: 20px;
-    margin-top: 30px;
+    border-radius: 25px;
+    margin-top: 37px;
+    margin-bottom: 70px;
 }
 
 .resources-by-role .transparent-bg>img {
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
     width: 100%;
-    height: 100%;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 /* resources by role ends  */
 
 /* seperating banner start  */
-.seperating-banner>div {
+.seperating-banner{
+    background-image: url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-AzureRegions-2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=983&qlt=95&fmt=png-alpha&fit=constrain");
+    background-position: center;
+    background-size: cover;
     width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.seperating-banner>div {  
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-flow: column;
     align-items: center;
-    display: flex;
-    flex-flow: column;
-    row-gap: 20px;
+    row-gap: 18px;
     overflow: hidden;
+    padding: 95px 0 126px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: .75rem;
+    padding-left: .75rem;
 }
 
 .seperating-banner>div * {
-    /* color: white; */
+    color: white;
     font-size: 20px;
 }
 
@@ -1167,7 +1211,6 @@ main {
     line-height: 56px;
     letter-spacing: -2.4px;
     font-weight: 500;
-    margin-top: 40px;
 }
 
 .seperating-banner>div p {
@@ -1176,6 +1219,7 @@ main {
     line-height: 32px;
     letter-spacing: -0.6px;
     font-weight: 400;
+    color: #d6e9f3;
 }
 
 .seperating-banner>div .square-button {
@@ -1185,32 +1229,34 @@ main {
     letter-spacing: -0.3px;
     font-weight: 500;
     color: #0e1726;
-    padding: 15px 20px;
+    padding: 13px 18px 17px 18px;
     border-radius: 8px;
-    margin-top: 10px;
-}
-
-.seperating-banner>div img {
-    width: 100%;
-    aspect-ratio: initial;
-    /* position: absolute; */
-    z-index: -1;
-    margin-top: -100px;
-    height: 100%;
-    max-height: 412px;
+    margin-top: 15px;
 }
 
 /* seperating banner end  */
 
 /* customer stories start  */
 .customer-stories{
-    margin-top: 96px;
+    margin-top: 66px;
     max-width: 1328px;
     padding: 0 5%;
     box-sizing: content-box;
     width: 90%;
+    min-width: 158px;
     display: flex;
     flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.customer-stories>.customer-stories-div{
+    width: 100%;
+    max-width: 1328px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    display: grid;
+    place-items: center;
 }
 
 .customer-stories-main-div{
@@ -1219,6 +1265,9 @@ main {
     grid-template-columns: repeat(2,1fr);
     padding: 8px;
     border-radius: 25px;
+    border: 1px solid #e2e8eb;
+    box-shadow: 0px 1px 1px 1px #e2e8eb;
+    margin-top: 35px;
 }
 
 .customer-stories-main-div>.content{
@@ -1226,6 +1275,12 @@ main {
     flex-flow: column;
     justify-content: space-between;
     padding: 16px;
+}
+
+.customer-stories-main-div>.content>.content-top{
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
 }
 
 .customer-stories-main-div>.content>.content-top img{
@@ -1246,7 +1301,7 @@ main {
     width: 100%;
     display: flex;
     flex-flow: column;
-    row-gap: 20px;
+    row-gap: 12px;
 }
 
 .customer-stories-main-div>.content>.content-bottom>p{
@@ -1260,12 +1315,12 @@ main {
 
 .customer-stories-main-div>.content>.content-bottom>ul{
     display: flex;
-    gap: 20px;
+    gap: 16px;
 }
 
 .customer-stories-main-div>.content>.content-bottom>ul>li{
     display: flex;
-    column-gap: 5px;
+    column-gap: 8px;
     min-width: max-content;
     width: fit-content;
     flex-wrap: nowrap;
@@ -1284,7 +1339,8 @@ main {
     letter-spacing: -0.3px;
     font-weight: 500;
     border-radius: 8px;
-    padding: 12px 15px;
+    padding: 10px 17px 14px 17px;
+    margin-top: 20px;
 }
 
 .customer-stories-main-div>.image{
@@ -1300,11 +1356,13 @@ main {
 }
 
 .customer-stories-small-div{
-    /* max-width: 1000px; */
+    width: 100%;
+    max-width: 1000px;
+    min-width: 0;
     background-color: #fefefe;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    margin-top: 20px;
+    margin-top: 35px;
     border-radius: 20px;
     align-self: center;
     overflow: hidden;
@@ -1312,7 +1370,7 @@ main {
 }
 
 .customer-stories-small-div>li{
-    padding: 35px;
+    padding: 30px;
     border-bottom: 4px solid transparent;
 }
 
@@ -1329,7 +1387,7 @@ main {
 }
 
 .customer-stories-small-div>li>img{
-    height: 60px;
+    width: 100%;
 }
 /* customer stories end  */
 
@@ -1482,7 +1540,7 @@ footer svg{
 .footer-bottom-section{
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .footer-bottom-section>div{
@@ -1523,6 +1581,12 @@ footer svg{
         max-width: 100vw;
         padding: 0 4.6rem;
     }
+
+    .products-and-services-divs .main{
+        height: 596px;
+    }
+
+
 }
 
 @media screen and (max-width:1439px) {
@@ -1563,6 +1627,61 @@ footer svg{
 
     .solutions .bottom-button {
         margin-top: 30px;
+    }
+
+    .products-and-services-divs{
+        flex-flow: column;
+    }
+
+    .products-and-services-divs .main{
+        max-width: 100%;
+    }
+
+    .products-and-services-divs>.main h1{
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -1.2px;
+    }
+
+    .products-and-services-divs>.grid,.products-and-services-divs>.grid>li{
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .products-and-services-divs>.grid>li h1{
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.54px;
+    }
+
+    .body-content-banner h1{
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -1.2px;
+    }
+
+    .resources-by-role .title{
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -1.5px;
+    }
+
+    .resources-by-role h3{
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -1px;
+    }
+
+    .seperating-banner>div h1{
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -2px;
+    }
+
+    .seperating-banner>div p{
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.54px;
     }
 
 
@@ -1672,6 +1791,19 @@ footer svg{
         padding-right: 477px;
     }
 
+    .products-and-services{
+        padding: 0 3.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 56px 0;
+        margin-bottom: 0;
+    }
+
+    /* .products-and-services-divs{
+        max-width: 100%;
+        width: 100%;
+    } */
+
 }
 
 @media screen and (max-width:859px) {
@@ -1771,7 +1903,7 @@ footer svg{
 
     .featured-news-divs>.card>h1 {
         padding: 0 8px;
-    }
+    }#d6e9f3
 
     .featured-news-divs>.card>ul {
         padding: 8px;
@@ -1854,6 +1986,40 @@ footer svg{
 
     .buttons-list>li {
         padding: 8px 16px 10px 16px;
+    }
+
+    .products-and-services-divs>.grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .products-and-services-divs>.grid>li{
+        height: fit-content;
+    } 
+
+    .body-content-banner>div>div{
+        display: flex;
+        flex-flow: column-reverse;
+        max-height: none;
+    }
+
+    .body-content-banner>div>div>div:first-child{
+        padding: 50px 0px 40px 10px;
+    }
+
+    .resources-by-role .transparent-bg{
+        width: 90%;
+        padding: 12px 15px;
+    }
+
+    .seperating-banner>div{
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .seperating-banner>div h1{
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1.6px;
     }
 
 }
@@ -1978,8 +2144,21 @@ footer svg{
         padding-right: 0px;
     }
 
+    .solutions>div {
+        padding: 0 1rem;
+    }
+
+    .seperating-banner>div>.square-button{
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
 }
 
 
 
 /* ............................................. */
+
+
+
